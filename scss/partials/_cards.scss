@@ -1,0 +1,7 @@
+.prodCard {
+  border: black 1px solid;
+  padding: 15px;
+  &__img {
+    max-width: 250px;
+  }
+}

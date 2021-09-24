@@ -1,11 +1,12 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AIAA,AAAA,SAAS,CAAC;EACR,MAAM,EAAE,eAAe;EACvB,OAAO,EAAE,IAAI;CAId;;AAHE,AAAD,cAAM,CAAC;EACL,SAAS,EAAE,KAAK;CACjB",
     "sources": [
         "../scss/styles.scss",
         "../scss/partials/_variables.scss",
         "../scss/partials/_layout.scss",
-        "../scss/partials/_header.scss"
+        "../scss/partials/_header.scss",
+        "../scss/partials/_cards.scss"
     ],
     "names": [],
     "file": "styles.css"
