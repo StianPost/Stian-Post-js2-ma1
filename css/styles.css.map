@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scss/styles.scss",
+        "../scss/partials/_variables.scss",
+        "../scss/partials/_layout.scss",
+        "../scss/partials/_header.scss"
+    ],
+    "names": [],
+    "file": "styles.css"
+}
