@@ -12,7 +12,7 @@ function cardFiller(param) {
   param.forEach((element) => {
     loading.innerHTML = ``;
     prodCards += `
-            <div class="col-3">
+            <div class="col">
               <div class="card prodCard">
                 <div class="prodCard__imgDiv">
                   <img src="${element.image}" class="card-img-top prodCard__img" alt="image of ${element.title}">
