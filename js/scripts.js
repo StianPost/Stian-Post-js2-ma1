@@ -1,6 +1,7 @@
 import apiCall from './lib/apiCall.js';
 import { filteringAnArray } from './lib/filterAnArray.js';
 import renderCards from './components/renderCards.js';
+import { saveToStorage, getStorageItem } from './lib/localStorageHelpers.js';
 
 const api = await apiCall('https://fakestoreapi.com/products');
 const loading = document.querySelector('.loading');
@@ -19,7 +20,12 @@ function cardFiller(param) {
                 <div class="card-body prodCard__body">
                   <h5 class="card-title">${element.title}</h5>
                   <p class="card-text">Price: ${element.price}</p>
-                  <a href="#" class="btn btn-primary prodCard__btn">Favorite</a>
+                  <a data-id="${element.id}" 
+                    data-price="${element.price}" 
+                    data-title="${element.title}"
+                    data-image="${element.image}" 
+                    href="#" class="btn btn-primary prodCard__btn favBtn">Favorite
+                  </a>
                 </div>
               </div>
             </div>
@@ -57,3 +63,33 @@ refresh.onclick = () => {
   renderCards(prodCards, '.prodContainer');
   results.innerHTML = '';
 };
+
+let favoriteArray = document.querySelectorAll('.favBtn');
+
+favoriteArray.forEach((element) => {
+  element.onclick = (e) => {
+    e.preventDefault();
+    element.classList.toggle('faved');
+    let localStorageObject = {
+      id: element.dataset.id,
+      price: element.dataset.price,
+      title: element.dataset.title,
+      image: element.dataset.image,
+    };
+
+    let favourites = getStorageItem('favourites');
+
+    let isInStorage = favourites.find(
+      (productObject) => productObject.id === localStorageObject.id
+    );
+    if (isInStorage === undefined) {
+      favourites.push(localStorageObject);
+      saveToStorage('favourites', favourites);
+    } else {
+      let removedElementArray = favourites.filter(
+        (productObject) => productObject.id !== localStorageObject.id
+      );
+      saveToStorage('favourites', removedElementArray);
+    }
+  };
+});

@@ -13,6 +13,10 @@
   color: white;
 }
 
+.faved {
+  background-color: darkred !important;
+}
+
 .prodCard {
   padding: 15px;
   min-height: 550px;
