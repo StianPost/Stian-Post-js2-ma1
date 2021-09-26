@@ -6,7 +6,7 @@ let favResult = document.querySelector('.fav');
 
 favourites.forEach((element) => {
   favContainer.innerHTML += `
-  <div class="col">
+            <div class="col">
               <div class="card favCardCard">
                 <div class="favCard__imgDiv">
                   <img src="${element.image}" class="card-img-top prodCard__img" alt="image of ${element.title}">
