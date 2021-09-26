@@ -1,7 +1,18 @@
 .prodCard {
-  border: black 1px solid;
+  border: #780406 1px solid !important;
   padding: 15px;
+  min-height: 550px;
+  margin: 10px 0px;
+  &__imgDiv {
+    height: 250px;
+  }
   &__img {
     max-width: 250px;
+    max-height: 250px;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
