@@ -1,5 +1,5 @@
 .refresh {
-  padding: 2px 5px;
+  padding: 2px 9px;
   border-radius: 5px;
   background-color: white;
   font-weight: 500;
@@ -14,10 +14,11 @@
 }
 
 .prodCard {
-  border: #780406 1px solid !important;
   padding: 15px;
   min-height: 550px;
-  margin: 10px 0px;
+  margin: 15px 0px;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .prodCard__imgDiv {
@@ -40,5 +41,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.prodCard__btn {
+  font-size: 1.3rem !important;
 }
 /*# sourceMappingURL=styles.css.map */

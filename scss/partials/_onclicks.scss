@@ -1,0 +1,13 @@
+.refresh {
+  padding: 2px 9px;
+  border-radius: 5px;
+  background-color: white;
+  font-weight: 500;
+  border: 2px green solid;
+  color: green;
+}
+.refresh:hover {
+  background-color: green;
+  border: 2px white solid;
+  color: white;
+}

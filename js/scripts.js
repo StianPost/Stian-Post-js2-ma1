@@ -19,7 +19,7 @@ function cardFiller(param) {
                 <div class="card-body prodCard__body">
                   <h5 class="card-title">${element.title}</h5>
                   <p class="card-text">Price: ${element.price}</p>
-                  <a href="#" class="btn btn-primary">Favorite</a>
+                  <a href="#" class="btn btn-primary prodCard__btn">Favorite</a>
                 </div>
               </div>
             </div>
@@ -52,6 +52,7 @@ search.onkeyup = function () {
 let refresh = document.querySelector('.refresh');
 
 refresh.onclick = () => {
+  searchResults.innerHTML = '';
   cardFiller(api);
   renderCards(prodCards, '.prodContainer');
   results.innerHTML = '';
