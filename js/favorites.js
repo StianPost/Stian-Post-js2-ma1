@@ -15,6 +15,7 @@ favourites.forEach((element) => {
                 <div class="card-body favCardCard__body">
                   <h5 class="card-title">${element.title}</h5>
                   <p class="card-text">Price: ${element.price}</p>
+                  <p class="card-text">${element.description}</p>
                 </div>
               </div>
             </div>

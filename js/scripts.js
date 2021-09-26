@@ -23,7 +23,8 @@ function cardFiller(param) {
                   <a data-id="${element.id}" 
                     data-price="${element.price}" 
                     data-title="${element.title}"
-                    data-image="${element.image}" 
+                    data-image="${element.image}"
+                    data-description="${element.description}" 
                     href="#" class="btn btn-primary prodCard__btn favBtn">Favorite
                   </a>
                 </div>
@@ -75,6 +76,7 @@ favoriteArray.forEach((element) => {
       price: element.dataset.price,
       title: element.dataset.title,
       image: element.dataset.image,
+      description: element.dataset.description,
     };
 
     let favourites = getStorageItem('favourites');
